@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title></title>
+</head>
+
+<body>
+    <header class="header">
+        <img src="poker-cards.svg" alt="">
+        <h1>Sex card</h1>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="description">
+                <img src="" id="image" />
+            </div>
+
+        </div>
+        <footer><input type="button" value="Выбрать карточку" id="button" /></footer>
+    </div>
+
+
+
+    <script src="https://kit.fontawesome.com/0019c10cab.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        var imgs = [
+            'img/1.png',
+            'img/2.png',
+            'img/3.png',
+            'img/4.png',
+            'img/5.png',
+            'img/6.png',
+            'img/7.png',
+            'img/8.png',
+            'img/9.png',
+            'img/10.png',
+        ];
+        let image = document.getElementById('image');
+        let button = document.getElementById('button');
+
+        button.onclick = function () {
+            image.src = imgs[Math.floor(Math.random() * imgs.length)];
+        };
+
+    </script>
+</body>
+
+</html>
